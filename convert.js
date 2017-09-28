@@ -3,6 +3,8 @@ var num, su, du, res, exp, arg;
 
 if(process.argv[2] !== undefined && process.argv[3] !== undefined && process.argv[5] !== undefined){
     num=process.argv[2];
+    // Avoid too short variable names. I guess `su` stands for `source unit` but I am not sure.
+    // Readers of your code should not have to do such guessing.
     su=process.argv[3];
     du=process.argv[5];
 
@@ -89,6 +91,7 @@ if(process.argv[2] !== undefined && process.argv[3] !== undefined && process.arg
         if(arg===false){
             res="Invalid parameters";
         }else{
+            // Consider printing the requested `Invalid parameters` message here to turn some additional tests green.
             res="instructions: use <number> <unit> to <unit> (e.g. 5 m to mm)";
         }
         
@@ -97,6 +100,7 @@ if(process.argv[2] !== undefined && process.argv[3] !== undefined && process.arg
     console.log(res);
 
 }else{
+    // Consider printing the requested `Invalid parameters` message here to turn some additional tests green.
     res="instructions: use <number> <unit> to <unit> (e.g. 5 m to mm)";
     console.log(res);
 }
